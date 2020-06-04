@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form class="form-with-validation" action="/signup">
+    <input type="text" name="name" class="name" placeholder="Имя" required>
+    <p class="name-message">Введите имя</p>
+
+    <input type="text" name="surname" placeholder="Фамилия" required>
+    <p class="surname-message">Введите фамилию</p>
+
+    <input type="email" name="mail" id="mail" placeholder="Email" required>
+    <p class="email-message">Введите почту</p>
+
+    <input type="number" name="growth" id="growth" placeholder="Ваш рост" min="100" max="250">
+    <p class="giraffe-message">Жирафам Нельзя!</p>
+
+
+    <input type="number" name="age" class="age" id="age" placeholder="Возраст" min="18" required>
+    <p class="age-message">Введите возраст</p>
+
+    <label for="about">О себе:</label>
+    <textarea name="about" id="about" cols="30" rows="10" maxlength="140"></textarea>
+
+    <fieldset>
+        <fieldset>
+            <legend>Ваш пол:</legend>
+            <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Муж.</label>
+            <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Жен.</label>
+        </fieldset>
+    </fieldset>
+
+    <label>Интересы:</label>
+    <select name="interests" id="interests" multiple>
+        <option>Игра на дудке</option>
+        <option>Коллекционирование шапочек</option>
+        <option>Пчеловодство</option>
+        <option>Шитьё</option>
+        <option>Античная философия</option>
+        <option>Футбол</option>
+    </select>
+
+    <input type="date" placeholder=" " min="1900-01-01" required>
+    <p class="date-message"></p>
+
+    <label for="phone">Ваш номер телефона:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" pattern="\d+[0-9]{10}" required>
+    <p class="phone-message">Введите номер телефона</p>
+    <label for="pass">Пароль:</label>
+    <input type="password" id="pass" minlength="8" required pattern="[A-Za-z0-9]">
+    <p class="pass-message">Введите пароль</p>
+    <label for="dis">Недоступное поля для ввода:</label>
+    <input type="text" id="dis" disabled>
+    <label for="town">Город:</label>
+    <input type="text" id="town" value="Питер">
+    <label for="reset"></label>
+    <input type='submit' class='validate-btn' value='Сохранить'/>
+    <button type="reset" id="reset">Отмена</button>
+
+</form>
+
+</body>
+<script src="code.js"></script>
+</html>

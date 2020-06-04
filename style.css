@@ -1,0 +1,28 @@
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+body {
+    font: 1em sans-serif;
+    padding: 0;
+    margin : 0;
+}
+
+form {
+    max-width: 200px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+p > label {
+    display: block;
+}
+
+
+input::placeholder {
+    color: blue;
+}
+.name {
+    margin-bottom: 50px;
+}
+.name-message {
+    display: none;
+}
