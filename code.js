@@ -5,6 +5,6 @@ const name = document.getElementById('name');
 form.addEventListener('submit', function (event) {
     event.preventDefault()
     if (name.value === '') {
-    document.getElementById('name-message').classList.add("show")
+    document.getElementById('nameMessage').classList.add("show")
     }
 })
