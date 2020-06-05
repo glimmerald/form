@@ -8,34 +8,28 @@
 <body>
 <form class="form-with-validation" action="/signup">
     <input type="text" name="name" class="name" id="name" placeholder="Имя" required>
-    <p class="name-message" id="nameMessage">Введите имя</p>
 
-    <input type="text" name="surname" placeholder="Фамилия" required>
-    <p class="surname-message">Введите фамилию</p>
+    <input type="text" class="surname" name="surname" placeholder="Фамилия" required>
 
-    <input type="email" name="mail" id="mail" placeholder="Email" required>
-    <p class="email-message">Введите почту</p>
+    <input type="email" class="mail" name="mail" id="mail" placeholder="Email" required>
 
-    <input type="number" name="growth" id="growth" placeholder="Ваш рост" min="100" max="250">
-    <p class="giraffe-message">Жирафам Нельзя!</p>
+    <input type="number" class="growth" name="growth" id="growth" placeholder="Ваш рост" min="100" max="250">
+    <p class="giraffe-message" id="giraffeMessage">Жирафам Нельзя!</p>
 
 
     <input type="number" name="age" class="age" id="age" placeholder="Возраст" min="18" required>
-    <p class="age-message">Введите возраст</p>
 
-    <label for="about">О себе:</label>
-    <textarea name="about" id="about" cols="30" rows="10" maxlength="140"></textarea>
+    <label for="about"><br>О себе:</label>
+    <textarea name="about" class="about" id="about" cols="30" rows="10" maxlength="140"></textarea>
 
-    <fieldset>
-        <fieldset>
+        <fieldset class="sex">
             <legend>Ваш пол:</legend>
             <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Муж.</label>
             <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Жен.</label>
         </fieldset>
-    </fieldset>
 
     <label>Интересы:</label>
-    <select name="interests" id="interests" multiple>
+    <select name="interests" class="interests" id="interests" multiple>
         <option>Игра на дудке</option>
         <option>Коллекционирование шапочек</option>
         <option>Пчеловодство</option>
@@ -43,22 +37,23 @@
         <option>Античная философия</option>
         <option>Футбол</option>
     </select>
+    <label>Дата рождения:</label>
+    <input type="date" class="birth" placeholder=" " min="1900-01-01" required>
 
-    <input type="date" placeholder=" " min="1900-01-01" required>
-    <p class="date-message"></p>
+    <label for="phone"><br>Ваш номер телефона:</label>
+    <input type="tel" class="phone" id="phone" name="phone" pattern="(^\+7)[0-9]{10}" required>
 
-    <label for="phone">Ваш номер телефона:</label>
-    <input type="tel" id="phone" name="phone" required>
-    <p class="phone-message">Введите номер телефона</p>
     <label for="pass">Пароль:</label>
-    <input type="password" id="pass" minlength="8" required>
-    <p class="pass-message">Введите пароль</p>
+    <input type="password" class="pass" id="pass" minlength="8" pattern="^[a-zA-Z0-9]+$" required>
+
     <label for="dis">Недоступное поля для ввода:</label>
-    <input type="text" id="dis" disabled>
+    <input type="text" class="dis" id="dis" disabled>
+
     <label for="town">Город:</label>
-    <input type="text" id="town" value="Питер">
+    <input type="text" class="town" id="town" value="Питер">
+
     <label for="reset"></label>
-    <input type='submit' class='validate-btn' value='Сохранить'/>
+    <button type="submit" class="validate-btn">Сохранить</button>
     <button type="reset" id="reset">Отмена</button>
 
 </form>

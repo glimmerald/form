@@ -1,10 +1,11 @@
 const form = document.querySelector('.form-with-validation');
 const name = document.getElementById('name');
+const growth = document.getElementById('growth')
 
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('click', function (event) {
     event.preventDefault()
-    if (name.value === '') {
-    document.getElementById('nameMessage').classList.add("show")
+    if (growth.value >= 250) {
+    document.getElementById('giraffeMessage').classList.add("show")
     }
 })

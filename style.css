@@ -20,13 +20,28 @@ p > label {
 input::placeholder {
     color: blue;
 }
-.name {
-    margin-bottom: 50px;
+.name,
+.growth,
+.surname,
+.mail,
+.age,
+.about,
+.sex,
+.interests,
+.birth,
+.pass,
+.town,
+.phone,
+.dis {
+    margin-bottom: 20px;
 }
-.name-message {
+.giraffe-message {
     display: none;
 }
 
 .show {
     display: block;
+    color: darkred;
+    border: thick double red;
+    padding: 5px 5px;
 }
